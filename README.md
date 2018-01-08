@@ -3,10 +3,10 @@
 
 2018.1.8
 
-####快捷键
+#### 快捷键
 windows: `Alt + insert`, Mac: `control + Enter`
 
-####功能介绍
+#### 功能介绍
 * GoCss 
     * 跳转到样式
         * .vue 文件
@@ -19,7 +19,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
 #### 获取帮助以及建议
 QQ:11563928
 
-####更新日志
+#### 更新日志
 * 1.1.0 changes: 新增pug文件跳转styl文件的支持
 * 1.1.1 changes: 修复bug
 * 1.1.2 changes: 打包问题
@@ -28,5 +28,5 @@ QQ:11563928
 * 1.1.5 changes: 修复了一个匹配bug，之前container有可能会误匹配到.container-any，现在将正确匹配到.container
 * 1.2.0 changes: 新增功能PasteCss,该功能可以将从chrome中调试的css样式,直接按照标准格式粘贴入stylus
 
-####Eggs
+#### Eggs
 [image](https://user-images.githubusercontent.com/13230237/34660350-9395c908-f47c-11e7-8f47-a383aabcf18e.png)
