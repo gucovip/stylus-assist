@@ -45,3 +45,7 @@ sourceSets {
         }
     }
 }
+publish {
+    pluginId 'vip.guco.stylusmodulejump'
+    // (optional) apply from: "YOUR_CUSTOM_PROPERTIES_FILE.properties"
+}
