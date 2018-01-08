@@ -3,6 +3,9 @@
 
 2018.1.8
 
+#### 获取Plugin
+直接从idea插件仓库中搜索 stylus-assist
+
 #### 快捷键
 windows: `Alt + insert`, Mac: `control + Enter`
 
