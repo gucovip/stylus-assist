@@ -1,8 +1,8 @@
 <idea-plugin>
-    <id>vip.guco.stylusmodulejump</id>
-    <name>stylus-module-jump</name>
-    <version>1.2.0</version>
-    <!--<vendor email="hanziyuan08@outlook.com" url="https://github.com/Bpazy/eql-plugin">Bpazy's Github</vendor>-->
+    <id>vip.guco.stylusassist</id>
+    <name>stylus-assist</name>
+    <version>1.2.1</version>
+    <vendor email="raiyeeeric@gmail.com" url="https://github.com/raiyeeeric/stylus-assist">stylus-assist</vendor>
 
     <description><![CDATA[
       Vue template jump to stylus<br>

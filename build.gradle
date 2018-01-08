@@ -15,8 +15,8 @@ buildscript {
 
 apply plugin: 'org.jetbrains.intellij'
 
-group 'vip.guco.stylusmodulejump'
-version '1.2.0'
+group 'vip.guco.stylusassist'
+version '1.2.1'
 
 apply plugin: 'java'
 
@@ -31,7 +31,7 @@ dependencies {
 }
 
 intellij {
-    pluginName 'stylus-module-jump'
+    pluginName 'stylus-assist'
     intellij.updateSinceUntilBuild false // Disables updating since-build attribute in plugin.xml
     publish {
         apply from: 'gradle.properties'
@@ -44,8 +44,4 @@ sourceSets {
             srcDirs 'src', 'gen'
         }
     }
-}
-publish {
-    pluginId 'vip.guco.stylusmodulejump'
-    // (optional) apply from: "YOUR_CUSTOM_PROPERTIES_FILE.properties"
 }
