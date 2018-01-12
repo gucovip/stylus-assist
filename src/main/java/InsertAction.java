@@ -36,6 +36,7 @@ public class InsertAction extends AnAction {
             }
             CaretModel caretModel = editor.getCaretModel();
             int offset = caretModel.getOffset();
+
             String space = StringUtils.leftPad("", caretModel.getLogicalPosition().column, " ");
             if (text == null) {
                 return;
