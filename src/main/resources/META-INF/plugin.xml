@@ -1,36 +1,36 @@
 <idea-plugin>
     <id>vip.guco.stylusassist</id>
     <name>stylus-assist</name>
-    <version>1.2.3</version>
+    <version>1.2.4</version>
     <vendor email="raiyeeeric@gmail.com" url="https://github.com/raiyeeeric/stylus-assist">stylus-assist</vendor>
 
     <description><![CDATA[
-    <b>快捷键：</b>
-    <p>windows: <code>Alt + insert</code>, Mac: <code>control + Enter</code></p>
-    <b>功能：</b>
+    <b>Shortcut Key：</b>
+    <p>Windows: <code>Alt + insert</code>, Mac: <code>control + Enter</code></p>
+    <b>Feature：</b>
     <ul>
         <li>GoCss
             <ul>
-                <li>跳转到样式
+                <li>Jump to stylus css
                     <ul>
-                        <li>.vue 文件</li>
-                        <li>.pug 跳转到 .styl 文件</li>
+                        <li>.vue file</li>
+                        <li>.pug jump to .styl file</li>
                     </ul>
                 </li>
-                <li>新增样式
+                <li>New class mode
                     <ul>
-                        <li>没有匹配的样式 创建标准格式class名称，例如：$style.aBC =&gt; .a-b-c</li>
+                        <li>If plugin can not find selected class,it will think you want to create a new class,such as：$style.aBC =&gt; .a-b-c</li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li>PasteCss 格式化从其他地方复制的样式
+        <li>PasteCss format some css you copy from another place, such as chrome or files
             <ul>
                 <li>margin:0;  =&gt;  margin 0</li>
             </ul>
         </li>
     </ul>
-      Vue template jump to stylus<br>
+      Vue template jump to stylus, somebody who want find css from .vue template or .pug template!<br>
     ]]></description>
 
     <change-notes><![CDATA[
@@ -38,12 +38,13 @@
         <li>1.1.0 新增pug文件跳转styl文件的支持</li>
         <li>1.1.1 修复bug</li>
         <li>1.1.2 打包问题</li>
-        <li>1.1.3 新增光标位置自动选择，适用于：.~"的class</li>
-        <li>1.1.4 优化了选择逻辑，手动选择和自动选择将更加流畅，不光适用于.~"</li>
-        <li>1.1.5 修复了一个匹配bug，之前container有可能会误匹配到.container-any，现在将正确匹配到.container</li>
+        <li>1.1.3 新增光标位置自动选择,适用于：.~"的class</li>
+        <li>1.1.4 优化了选择逻辑,手动选择和自动选择将更加流畅,不光适用于.~"</li>
+        <li>1.1.5 修复了一个匹配bug,之前container有可能会误匹配到.container-any,现在将正确匹配到.container</li>
         <li>1.2.0 新增功能PasteCss,该功能可以将从chrome中调试的css样式,直接按照标准格式粘贴入stylus</li>
         <li>1.2.2 支持更多平台</li>
-        <li>1.2.3 修复了一个依赖问题，这个问题会导致WebStorm上运行PasteCss出错</li>
+        <li>1.2.3 修复了一个依赖问题,这个问题会导致WebStorm上运行PasteCss出错</li>
+        <li>1.2.4 应平台要求，添加新的英文描述，需要中文描述的，可以去github查看。</li>
     </ul>
     ]]>
     </change-notes>

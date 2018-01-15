@@ -18,6 +18,15 @@ windows: `Alt + insert`, Mac: `control + Enter`
         * 没有匹配的样式 创建标准格式class名称，例如：$style.aBC => .a-b-c
 * PasteCss 格式化从其他地方复制的样式
     * margin:0;  =>  margin 0
+    
+* GoCss
+    * Jump to stylus css
+         * .vue file
+         * .pug jump to .styl file
+    * New class mode
+         * If plugin can not find selected class,it will think you want to create a new class,such as：$style.aBC =&gt; .a-b-c
+* PasteCss format some css you copy from another place, such as chrome or files
+    * margin:0;  =&gt;  margin 0
 
 #### 获取帮助以及建议
 QQ:11563928
@@ -31,6 +40,7 @@ QQ:11563928
 * 1.1.5 changes: 修复了一个匹配bug，之前container有可能会误匹配到.container-any，现在将正确匹配到.container
 * 1.2.0 changes: 新增功能PasteCss,该功能可以将从chrome中调试的css样式,直接按照标准格式粘贴入stylus
 * 1.2.1~1.2.3 changes: 支持多平台，修复一些小问题
+* 1.2.4 changes: 应平台要求，添加新的英文描述，需要中文描述的，可以去github查看。
 
 #### Eggs
 ![image](https://user-images.githubusercontent.com/13230237/34660350-9395c908-f47c-11e7-8f47-a383aabcf18e.png)
