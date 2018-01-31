@@ -5,6 +5,7 @@ import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
+import com.intellij.openapi.editor.SelectionModel;
 import org.apache.commons.lang3.StringUtils;
 
 import java.awt.*;
@@ -34,26 +35,41 @@ public class InsertAction extends AnAction {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            CaretModel caretModel = editor.getCaretModel();
-            int offset = caretModel.getOffset();
+            //检查是否有选择的内容 如果选中则先清除选中内容
+            final SelectionModel selectionModel = editor.getSelectionModel();
+            String selectedText = selectionModel.getSelectedText();
+            if(selectedText != null) {
+                final int start = selectionModel.getSelectionStart();
+                final int end = selectionModel.getSelectionEnd();
+                WriteCommandAction.runWriteCommandAction(editor.getProject(),
+                        () -> document.replaceString(start, end, ""));
+            }
 
+            //获取空格数
+            CaretModel caretModel = editor.getCaretModel();
             String space = StringUtils.leftPad("", caretModel.getLogicalPosition().column, " ");
             if (text == null) {
                 return;
             }
+            //替换':' 和 ';'
             text = text.replaceAll(":", "");
             text = text.replaceAll(";", "");
             String[] strings = text.split("\n");
 
             List<String> resultList = new ArrayList<>();
             for (int i = 0; i < strings.length; i++) {
+                String enterSymbol = (i == strings.length - 1 ? "" : "\n");
                 if (i > 0) {
-                    resultList.add(space + strings[i].trim() + "\n");
+                    resultList.add(space + strings[i].trim() + enterSymbol);
                     continue;
                 }
-                resultList.add(strings[i].trim() + "\n");
+                resultList.add(strings[i].trim() + enterSymbol);
             }
-            //Making the replacement
+
+            //获取当前光标位置
+            int offset = caretModel.getOffset();
+
+            //插入内容
             WriteCommandAction.runWriteCommandAction(
                     editor.getProject(),
                     () -> document.insertString(offset, StringUtils.join(resultList, "")));

@@ -41,6 +41,7 @@ QQ:11563928
 * 1.2.0 changes: 新增功能PasteCss,该功能可以将从chrome中调试的css样式,直接按照标准格式粘贴入stylus
 * 1.2.1~1.2.3 changes: 支持多平台，修复一些小问题
 * 1.2.4 changes: 应平台要求，添加新的英文描述，需要中文描述的，可以去github查看。
+* 1.2.5 优化PasteCss插入方式，现在会正确插入到指定位置。新增选中部分样式，可以直接替换插入，注意替换插入包含两步：删除和插入，因此撤销时需要两次才能撤销完善。
 
 #### Eggs
 ![image](https://user-images.githubusercontent.com/13230237/34660350-9395c908-f47c-11e7-8f47-a383aabcf18e.png)

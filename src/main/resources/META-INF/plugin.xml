@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>vip.guco.stylusassist</id>
     <name>stylus-assist</name>
-    <version>1.2.4</version>
+    <version>1.2.5</version>
     <vendor email="raiyeeeric@gmail.com" url="https://github.com/raiyeeeric/stylus-assist">stylus-assist</vendor>
 
     <description><![CDATA[
@@ -24,9 +24,9 @@
                 </li>
             </ul>
         </li>
-        <li>PasteCss format some css you copy from another place, such as chrome or files
+        <li>PasteCss
             <ul>
-                <li>margin:0;  =&gt;  margin 0</li>
+                <li>format some css(don't contains class or id) you copy from another place, such as chrome or files, such as margin:0;  =&gt;  margin 0</li>
             </ul>
         </li>
     </ul>
@@ -35,16 +35,12 @@
 
     <change-notes><![CDATA[
     <ul>
-        <li>1.1.0 新增pug文件跳转styl文件的支持</li>
-        <li>1.1.1 修复bug</li>
-        <li>1.1.2 打包问题</li>
-        <li>1.1.3 新增光标位置自动选择,适用于：.~"的class</li>
-        <li>1.1.4 优化了选择逻辑,手动选择和自动选择将更加流畅,不光适用于.~"</li>
-        <li>1.1.5 修复了一个匹配bug,之前container有可能会误匹配到.container-any,现在将正确匹配到.container</li>
+        <li>......</li>
         <li>1.2.0 新增功能PasteCss,该功能可以将从chrome中调试的css样式,直接按照标准格式粘贴入stylus</li>
         <li>1.2.2 支持更多平台</li>
         <li>1.2.3 修复了一个依赖问题,这个问题会导致WebStorm上运行PasteCss出错</li>
         <li>1.2.4 应平台要求，添加新的英文描述，需要中文描述的，可以去github查看。</li>
+        <li>1.2.5 优化PasteCss插入方式，现在会正确插入到指定位置。新增选中部分样式，可以直接替换插入，注意替换插入包含两步：删除和插入，因此撤销时需要两次才能撤销完善。</li>
     </ul>
     ]]>
     </change-notes>
