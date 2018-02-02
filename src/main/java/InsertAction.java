@@ -35,18 +35,14 @@ public class InsertAction extends AnAction {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //检查是否有选择的内容 如果选中则先清除选中内容
+            //获取位置
             final SelectionModel selectionModel = editor.getSelectionModel();
-            String selectedText = selectionModel.getSelectedText();
-            if(selectedText != null) {
-                final int start = selectionModel.getSelectionStart();
-                final int end = selectionModel.getSelectionEnd();
-                WriteCommandAction.runWriteCommandAction(editor.getProject(),
-                        () -> document.replaceString(start, end, ""));
-            }
+            final int start = selectionModel.getSelectionStart();
+            final int end = selectionModel.getSelectionEnd();
 
             //获取空格数
             CaretModel caretModel = editor.getCaretModel();
+            caretModel.moveToOffset(start);
             String space = StringUtils.leftPad("", caretModel.getLogicalPosition().column, " ");
             if (text == null) {
                 return;
@@ -65,14 +61,9 @@ public class InsertAction extends AnAction {
                 }
                 resultList.add(strings[i].trim() + enterSymbol);
             }
-
-            //获取当前光标位置
-            int offset = caretModel.getOffset();
-
             //插入内容
-            WriteCommandAction.runWriteCommandAction(
-                    editor.getProject(),
-                    () -> document.insertString(offset, StringUtils.join(resultList, "")));
+            WriteCommandAction.runWriteCommandAction(editor.getProject(),
+                    () -> document.replaceString(start, end, StringUtils.join(resultList, "")));
         }
 
     }
