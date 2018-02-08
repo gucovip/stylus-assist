@@ -48,4 +48,5 @@ QQ:11563928
 * 1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。
 
 #### Donate
-![wechatimg73](https://user-images.githubusercontent.com/13230237/35953873-b0277e4c-0cc1-11e8-9482-5962fe0bedab.jpeg)
+![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)
+
