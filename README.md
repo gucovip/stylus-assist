@@ -47,5 +47,5 @@ QQ:11563928
 * 1.2.5 优化PasteCss插入方式，现在会正确插入到指定位置。新增选中部分样式，可以直接替换插入，注意替换插入包含两步：删除和插入，因此撤销时需要两次才能撤销完善。
 * 1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。
 
-#### Eggs
-![image](https://user-images.githubusercontent.com/13230237/34660350-9395c908-f47c-11e7-8f47-a383aabcf18e.png)
+#### Donate
+![wechatimg73](https://user-images.githubusercontent.com/13230237/35953873-b0277e4c-0cc1-11e8-9482-5962fe0bedab.jpeg)
