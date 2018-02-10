@@ -50,6 +50,6 @@ QQ:11563928
 * 1.2.5 优化PasteCss插入方式，现在会正确插入到指定位置。新增选中部分样式，可以直接替换插入，注意替换插入包含两步：删除和插入，因此撤销时需要两次才能撤销完善。
 * 1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。
 
-#### Donate
+#### Donate捐赠
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)
 
