@@ -6,6 +6,9 @@
 #### 获取Plugin
 直接从idea插件仓库中搜索 stylus-assist
 
+#### 技术交流
+欢迎加入前端技术招聘交流QQ群：493209390，加群备注Github看到。
+
 #### 快捷键
 windows: `Alt + insert`, Mac: `control + Enter`
 
