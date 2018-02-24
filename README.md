@@ -51,6 +51,6 @@ QQ:11563928
 * 1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。
 * 1.2.7 优化PasteCss格式化代码的逻辑，区别处理混合代码的格式化效果；优化GoCss跳转后光标位置。
 
-#### Donate
+#### Donate捐赠
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)
 
