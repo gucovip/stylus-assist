@@ -47,24 +47,42 @@ public class InsertAction extends AnAction {
             if (text == null) {
                 return;
             }
-            //替换':' 和 ';'
-            text = text.replaceAll(":", "");
-            text = text.replaceAll(";", "");
-            String[] strings = text.split("\n");
-
-            List<String> resultList = new ArrayList<>();
-            for (int i = 0; i < strings.length; i++) {
-                String enterSymbol = (i == strings.length - 1 ? "" : "\n");
-                if (i > 0) {
-                    resultList.add(space + strings[i].trim() + enterSymbol);
-                    continue;
-                }
-                resultList.add(strings[i].trim() + enterSymbol);
-            }
+            //格式化代码
+            final String resultText = formatCode(text, space);
             //插入内容
             WriteCommandAction.runWriteCommandAction(editor.getProject(),
-                    () -> document.replaceString(start, end, StringUtils.join(resultList, "")));
+                    () -> document.replaceString(start, end, resultText));
         }
 
+    }
+
+    private String formatCode(String codeText, String space) {
+        //去除分号
+        String text = codeText.replaceAll(";", "");
+        //按行分割
+        String[] stringEnters = text.split("\n");
+
+        List<String> resultList = new ArrayList<>();
+        for (int i = 0; i < stringEnters.length; i++) {
+            //去除两端空格
+            String middleString = stringEnters[i].trim();
+            //处理有冒号
+            if (middleString.contains(":")) {
+                String[] split = middleString.split(":");
+                for (int j = 0; j < split.length; j++) {
+                    split[j] = split[j].trim();
+                }
+                middleString = StringUtils.join(split, " ");
+            }
+            //最后一行不换行
+            String enterSymbol = (i == stringEnters.length - 1 ? "" : "\n");
+            if (i > 0) {
+                resultList.add(space + middleString + enterSymbol);
+                continue;
+            }
+            resultList.add(middleString + enterSymbol);
+        }
+        //全部拼接
+        return StringUtils.join(resultList, "");
     }
 }

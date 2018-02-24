@@ -1,7 +1,7 @@
 # stylus-assist
 帮助vue.js开发者 编辑 stylus 样式
 
-2018.1.8
+2018.2.24
 
 #### 获取Plugin
 直接从idea插件仓库中搜索 stylus-assist
@@ -13,7 +13,7 @@
 windows: `Alt + insert`, Mac: `control + Enter`
 
 #### 最近更新
-1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。现在撤销只需要1次就可以回退。
+1.2.7 优化PasteCss格式化代码的逻辑，区别处理混合代码的格式化效果；优化GoCss跳转后光标位置。
 
 #### 功能介绍
 * GoCss 
@@ -22,7 +22,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
         * .pug 跳转到 .styl 文件
     * 新增样式
         * 没有匹配的样式 创建标准格式class名称，例如：$style.aBC => .a-b-c
-* PasteCss 格式化从其他地方复制的样式
+* PasteCss 格式化从其他地方复制的样式（不包含class或id等css选择器）
     * margin:0;  =>  margin 0
     
 * GoCss
@@ -31,7 +31,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
          * .pug jump to .styl file
     * New class mode
          * If plugin can not find selected class,it will think you want to create a new class,such as：$style.aBC =&gt; .a-b-c
-* PasteCss format some css you copy from another place, such as chrome or files
+* PasteCss format some css(don't contains class or other css selectors) you copy from another place, such as chrome or files
     * margin:0;  =&gt;  margin 0
 
 #### 获取帮助以及建议
@@ -49,6 +49,7 @@ QQ:11563928
 * 1.2.4 changes: 应平台要求，添加新的英文描述，需要中文描述的，可以去github查看。
 * 1.2.5 优化PasteCss插入方式，现在会正确插入到指定位置。新增选中部分样式，可以直接替换插入，注意替换插入包含两步：删除和插入，因此撤销时需要两次才能撤销完善。
 * 1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。
+* 1.2.7 优化PasteCss格式化代码的逻辑，区别处理混合代码的格式化效果；优化GoCss跳转后光标位置。
 
 #### Donate
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)

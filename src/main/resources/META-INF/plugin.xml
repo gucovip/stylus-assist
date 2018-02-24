@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>vip.guco.stylusassist</id>
     <name>stylus-assist</name>
-    <version>1.2.6</version>
+    <version>1.2.7</version>
     <vendor email="raiyeeeric@gmail.com" url="https://github.com/raiyeeeric/stylus-assist">stylus-assist</vendor>
 
     <description><![CDATA[
@@ -36,12 +36,9 @@
     <change-notes><![CDATA[
     <ul>
         <li>......</li>
-        <li>1.2.0 新增功能PasteCss,该功能可以将从chrome中调试的css样式,直接按照标准格式粘贴入stylus</li>
-        <li>1.2.2 支持更多平台</li>
-        <li>1.2.3 修复了一个依赖问题,这个问题会导致WebStorm上运行PasteCss出错</li>
-        <li>1.2.4 应平台要求，添加新的英文描述，需要中文描述的，可以去github查看。</li>
         <li>1.2.5 优化PasteCss插入方式，现在会正确插入到指定位置。新增选中部分样式，可以直接替换插入，注意替换插入包含两步：删除和插入，因此撤销时需要两次才能撤销完善。</li>
         <li>1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。</li>
+        <li>1.2.7 优化PasteCss格式化代码的逻辑，区别处理混合代码的格式化效果；优化GoCss跳转后光标位置。</li>
     </ul>
     ]]>
     </change-notes>

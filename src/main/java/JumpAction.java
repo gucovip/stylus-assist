@@ -125,7 +125,8 @@ public class JumpAction extends AnAction {
             //选中匹配到的结果，引起注意
             SelectionModel targetSelectionModel = targetEdit.getSelectionModel();
             targetSelectionModel.setSelection(x.get(0), x.get(1) - 1);
-
+            CaretModel caretModel = targetEdit.getCaretModel();
+            caretModel.moveToOffset(x.get(1) - 1);
 
         }
     }
@@ -168,5 +169,7 @@ public class JumpAction extends AnAction {
         scrollingModel.scrollTo(logicalPosition, ScrollType.MAKE_VISIBLE);
         SelectionModel selectionModel = editor.getSelectionModel();
         selectionModel.setSelection(x.get(0), x.get(1) - 1);
+        CaretModel caretModel = editor.getCaretModel();
+        caretModel.moveToOffset(x.get(1) - 1, true);
     }
 }
