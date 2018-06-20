@@ -52,15 +52,6 @@ public class JumpAction extends AnAction {
         String allContent = editor.getDocument().getText();
 
         if (selectedText == null) {
-//            int selectionStart = selectionModel.getSelectionStart();
-//            String substring = allContent.substring(0, selectionStart);
-
-//            int startIndex = substring.lastIndexOf(".");
-//            if (startIndex <= 0) return;
-//            int endIndex = allContent.indexOf("\"", startIndex);
-//            if (endIndex <= 0) return;
-//            if (startIndex == endIndex) return;
-//            selectedText = allContent.substring(startIndex + 1, endIndex);
             selectionModel.selectWordAtCaret(true);
             selectedText = selectionModel.getSelectedText();
         }
@@ -85,7 +76,15 @@ public class JumpAction extends AnAction {
                 return;
             }
 
-            JumpToEditorAndSelectIt(x, editor);
+            // 新的实现逻辑，支持 Navigate Back & Forward
+            PsiFile targetPsiFile = currentPsiFile.getParent().findFile(currentFileName + ".vue");
+            OpenFileDescriptor openFileDescriptor = new OpenFileDescriptor(
+                    anActionEvent.getProject(),
+                    targetPsiFile.getVirtualFile(),
+                    x.get(0));
+            Editor targetEdit = FileEditorManager.getInstance(anActionEvent.getProject())
+                    .openTextEditor(openFileDescriptor, true);
+            JumpToEditorAndSelectIt(x, targetEdit);
 
         } else if (FILE_TYPE.PUG.getName().equals(currentFileType)) {
             if (currentPsiFile.getParent() == null) return;

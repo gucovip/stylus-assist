@@ -13,7 +13,7 @@
 windows: `Alt + insert`, Mac: `control + Enter`
 
 #### 最近更新
-1.2.7 优化PasteCss格式化代码的逻辑，区别处理混合代码的格式化效果；优化GoCss跳转后光标位置。
+1.3.0 GoCss加入一直期待支持的 Navigate Back & Forward 快捷键来回切换。
 
 #### 功能介绍
 * GoCss 
@@ -50,6 +50,7 @@ QQ:11563928
 * 1.2.5 优化PasteCss插入方式，现在会正确插入到指定位置。新增选中部分样式，可以直接替换插入，注意替换插入包含两步：删除和插入，因此撤销时需要两次才能撤销完善。
 * 1.2.6 继续优化PasteCss将插入操作合并成一步，进一步方便使用。
 * 1.2.7 优化PasteCss格式化代码的逻辑，区别处理混合代码的格式化效果；优化GoCss跳转后光标位置。
+* 1.3.0 GoCss加入一直期待支持的 Navigate Back & Forward 快捷键来回切换。
 
 #### Donate捐赠
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)
