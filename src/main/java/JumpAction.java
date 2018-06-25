@@ -156,7 +156,7 @@ public class JumpAction extends AnAction {
         return sb.toString().toLowerCase();
     }
 
-    private static void CopyToClip(String str) {
+    public static void CopyToClip(String str) {
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();//获取系统剪切板
         StringSelection selection = new StringSelection(str);//构建String数据类型
         clipboard.setContents(selection, selection);//添加文本到系统剪切板
