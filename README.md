@@ -13,7 +13,8 @@
 windows: `Alt + insert`, Mac: `control + Enter`
 
 #### 最近更新
-1.3.0 GoCss加入一直期待支持的 Navigate Back & Forward 快捷键来回切换。
+* 2018.11.2
+    * 1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。
 
 #### 功能介绍
 * GoCss 
@@ -60,6 +61,7 @@ QQ:11563928
 * 1.2.7 优化PasteCss格式化代码的逻辑，区别处理混合代码的格式化效果；优化GoCss跳转后光标位置。
 * 1.3.0 GoCss加入一直期待支持的 Navigate Back & Forward 快捷键来回切换。
 * 1.4.0 新增InsertClass功能，该功能处于公共测试阶段，如有问题，欢迎在github上提出。
+* 1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。
 
 #### Donate捐赠
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)

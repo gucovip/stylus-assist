@@ -40,8 +40,14 @@ public class InsertClassAction extends AnAction {
         String insertString = "\n  " + insertClass + "\n    \n";
         Document document = editor.getDocument();
         int endTag = allContent.indexOf("</style>");
+        if (endTag == -1) {
+            endTag = allContent.length() + 21;
+            WriteCommandAction.runWriteCommandAction(editor.getProject(), () -> document.insertString(allContent.length(), "<style lang=\"stylus\"></style>"));
+
+        }
+        int newEndTag = endTag;
         WriteCommandAction.runWriteCommandAction(editor.getProject(),
-                () -> document.insertString(endTag, insertString));
+                () -> document.insertString(newEndTag, insertString));
         PsiFile targetPsiFile = currentPsiFile.getParent().findFile(currentFileName + ".vue");
         OpenFileDescriptor openFileDescriptor = new OpenFileDescriptor(
                 anActionEvent.getProject(),

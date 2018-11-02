@@ -6,7 +6,6 @@ import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
-import org.apache.commons.lang3.StringUtils;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
@@ -43,7 +42,10 @@ public class InsertAction extends AnAction {
             //获取空格数
             CaretModel caretModel = editor.getCaretModel();
             caretModel.moveToOffset(start);
-            String space = StringUtils.leftPad("", caretModel.getLogicalPosition().column, " ");
+            String space = "";
+            for (int i = 0; i < caretModel.getLogicalPosition().column; i++) {
+                space += " ";
+            }
             if (text == null) {
                 return;
             }
@@ -72,7 +74,7 @@ public class InsertAction extends AnAction {
                 for (int j = 0; j < split.length; j++) {
                     split[j] = split[j].trim();
                 }
-                middleString = StringUtils.join(split, " ");
+                middleString = String.join(" ", split);
             }
             //最后一行不换行
             String enterSymbol = (i == stringEnters.length - 1 ? "" : "\n");
@@ -83,6 +85,6 @@ public class InsertAction extends AnAction {
             resultList.add(middleString + enterSymbol);
         }
         //全部拼接
-        return StringUtils.join(resultList, "");
+        return String.join("", resultList);
     }
 }
