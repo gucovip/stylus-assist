@@ -16,7 +16,7 @@ buildscript {
 apply plugin: 'org.jetbrains.intellij'
 
 group 'vip.guco.stylusassist'
-version '1.4.1'
+version '1.4.2'
 
 apply plugin: 'java'
 
