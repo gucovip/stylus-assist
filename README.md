@@ -64,6 +64,6 @@ QQ:11563928
 * 1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。
 * 1.4.2 修改开源项目地址。
 
-#### Buy me a coffee
+#### 给我买杯咖啡 Buy me a coffee
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)
 
