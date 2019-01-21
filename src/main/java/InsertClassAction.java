@@ -8,6 +8,9 @@ import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.fileEditor.OpenFileDescriptor;
 import com.intellij.psi.PsiFile;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class InsertClassAction extends AnAction {
     @Override
@@ -15,15 +18,16 @@ public class InsertClassAction extends AnAction {
         if (anActionEvent.getProject() == null) return;
         // TODO: insert action logic here
         //获取当前的编辑者
+
         final Editor editor = anActionEvent.getRequiredData(CommonDataKeys.EDITOR);
+
         //获取当前的文件
         PsiFile currentPsiFile = anActionEvent.getData(LangDataKeys.PSI_FILE);
         if (currentPsiFile == null) return;
-        String currentPsiFileName = currentPsiFile.getName();
-        //获取文件名
-        String currentFileName = currentPsiFileName.split("\\.")[0];
-        //获取文件类型
-        String currentFileType = currentPsiFileName.split("\\.")[1].toLowerCase();
+
+        //分割文件名 获取文件名
+        String currentFileName = currentPsiFile.getName().split("\\.")[0];
+
         //获取当前选择的文本
         final SelectionModel selectionModel = editor.getSelectionModel();
         String selectedText = selectionModel.getSelectedText();
@@ -37,17 +41,22 @@ public class InsertClassAction extends AnAction {
         }
 
         String insertClass = "." + JumpAction.HumpToMiddleline(selectedText);
-        String insertString = "\n  " + insertClass + "\n    \n";
+        String preInsertString = "\n  " + insertClass + "\n    \n";
         Document document = editor.getDocument();
         int endTag = allContent.indexOf("</style>");
         if (endTag == -1) {
             endTag = allContent.length() + 21;
             WriteCommandAction.runWriteCommandAction(editor.getProject(), () -> document.insertString(allContent.length(), "<style lang=\"stylus\"></style>"));
-
+        } else {
+            Pattern pattern = Pattern.compile("<style[\\s\\S]*>([\\s\\S]*?)</style>");
+            Matcher matcher = pattern.matcher(allContent);
+            if (matcher.find() && matcher.group(1).trim().length() <= 0) {
+                preInsertString = preInsertString.substring(1);
+            }
         }
         int newEndTag = endTag;
-        WriteCommandAction.runWriteCommandAction(editor.getProject(),
-                () -> document.insertString(newEndTag, insertString));
+        String insertString = preInsertString;
+        WriteCommandAction.runWriteCommandAction(editor.getProject(), () -> document.insertString(newEndTag, insertString));
         PsiFile targetPsiFile = currentPsiFile.getParent().findFile(currentFileName + ".vue");
         OpenFileDescriptor openFileDescriptor = new OpenFileDescriptor(
                 anActionEvent.getProject(),

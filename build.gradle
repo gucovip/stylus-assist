@@ -16,7 +16,7 @@ buildscript {
 apply plugin: 'org.jetbrains.intellij'
 
 group 'vip.guco.stylusassist'
-version '1.4.2'
+version '1.4.3'
 
 apply plugin: 'java'
 
@@ -32,7 +32,7 @@ dependencies {
 
 intellij {
     pluginName 'stylus-assist'
-    version 'IC-2018.1.5'
+    version 'IC-2018.2.6'
     intellij.updateSinceUntilBuild false // Disables updating since-build attribute in plugin.xml
     publish {
         apply from: 'gradle.properties'

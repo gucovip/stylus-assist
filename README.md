@@ -1,5 +1,5 @@
 # stylus-assist
-帮助vue.js开发者 编辑 stylus 样式
+帮助vue.js开发者 编辑 stylus 样式， 适用于 vue.js 的单文件组件。
 
 2018.2.24
 
@@ -7,14 +7,14 @@
 直接从idea插件仓库中搜索 stylus-assist
 
 #### 技术交流
-欢迎加入前端技术招聘交流QQ群：493209390，加群备注Github看到。
+因为下载量达到10k+，重新组建stylus-assist的交流QQ群：807838852，加群备注Github看到。
 
 #### 快捷键
 windows: `Alt + insert`, Mac: `control + Enter`
 
 #### 最近更新
 * 2018.11.2
-    * 1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。
+    * 1.4.3 优化了InsertClass的首次插入操作。
 
 #### 功能介绍
 * GoCss 
@@ -63,6 +63,7 @@ QQ:11563928
 * 1.4.0 新增InsertClass功能，该功能处于公共测试阶段，如有问题，欢迎在github上提出。
 * 1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。
 * 1.4.2 修改开源项目地址。
+* 1.4.3 优化了InsertClass的首次插入操作。
 
 #### 给我买杯咖啡 Buy me a coffee
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)
