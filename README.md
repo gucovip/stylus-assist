@@ -17,6 +17,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
     * 1.4.3 优化了InsertClass的首次插入操作。
 
 #### 功能介绍
+##### 简体中文
 * GoCss 
     * 跳转到样式
         * .vue 文件
@@ -29,7 +30,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
     *   .newClass
     *     |(光标定位于这里)
     * <style>
-    
+##### English
 * GoCss
     * Jump to stylus css
          * .vue file
