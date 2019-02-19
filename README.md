@@ -1,5 +1,6 @@
 # stylus-assist
 帮助vue.js开发者 编辑 stylus 样式， 适用于 vue.js 的单文件组件。
+祝大家元宵节快乐！
 
 2018.2.24
 
