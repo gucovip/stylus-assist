@@ -1,8 +1,7 @@
 # stylus-assist
+项目启动时间 2018.2.24
 帮助vue.js开发者 编辑 stylus 样式， 适用于 vue.js 的单文件组件。
-祝大家元宵节快乐！
-
-2018.2.24
+正在筹备开发 VS code 插件，如果有兴趣的可以联系 QQ:11563928
 
 #### 获取Plugin
 直接从idea插件仓库中搜索 stylus-assist
