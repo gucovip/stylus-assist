@@ -29,9 +29,7 @@ public class InsertAction extends AnAction {
             String text = null;//从数据中获取文本值
             try {
                 text = (String) content.getTransferData(DataFlavor.stringFlavor);
-            } catch (UnsupportedFlavorException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
+            } catch (UnsupportedFlavorException | IOException e) {
                 e.printStackTrace();
             }
             //获取位置
@@ -42,15 +40,15 @@ public class InsertAction extends AnAction {
             //获取空格数
             CaretModel caretModel = editor.getCaretModel();
             caretModel.moveToOffset(start);
-            String space = "";
+            StringBuilder space = new StringBuilder();
             for (int i = 0; i < caretModel.getLogicalPosition().column; i++) {
-                space += " ";
+                space.append(" ");
             }
             if (text == null) {
                 return;
             }
             //格式化代码
-            final String resultText = formatCode(text, space);
+            final String resultText = formatCode(text, space.toString());
             //插入内容
             WriteCommandAction.runWriteCommandAction(editor.getProject(),
                     () -> document.replaceString(start, end, resultText));

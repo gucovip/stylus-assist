@@ -13,8 +13,8 @@
 windows: `Alt + insert`, Mac: `control + Enter`
 
 #### 最近更新
-* 2018.11.2
-    * 1.4.3 优化了InsertClass的首次插入操作。
+* 2020.07.20
+    * 1.4.4 优化代码
 
 #### 功能介绍
 ##### 简体中文
@@ -65,6 +65,7 @@ QQ:11563928
 * 1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。
 * 1.4.2 修改开源项目地址。
 * 1.4.3 优化了InsertClass的首次插入操作。
+* 1.4.4 优化代码
 
 #### 给我买杯咖啡 Buy me a coffee
 ![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)

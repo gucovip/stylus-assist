@@ -57,13 +57,16 @@ public class InsertClassAction extends AnAction {
         int newEndTag = endTag;
         String insertString = preInsertString;
         WriteCommandAction.runWriteCommandAction(editor.getProject(), () -> document.insertString(newEndTag, insertString));
+        assert currentPsiFile.getParent() != null;
         PsiFile targetPsiFile = currentPsiFile.getParent().findFile(currentFileName + ".vue");
+        assert targetPsiFile != null;
         OpenFileDescriptor openFileDescriptor = new OpenFileDescriptor(
                 anActionEvent.getProject(),
                 targetPsiFile.getVirtualFile(),
                 document.getLineNumber(endTag - 1));
         Editor targetEdit = FileEditorManager.getInstance(anActionEvent.getProject())
                 .openTextEditor(openFileDescriptor, true);
+        assert targetEdit != null;
         ScrollingModel scrollingModel = targetEdit.getScrollingModel();
         scrollingModel.scrollTo(targetEdit.offsetToLogicalPosition(endTag + insertString.length() - 1), ScrollType.MAKE_VISIBLE);
         CaretModel caretModel = targetEdit.getCaretModel();
