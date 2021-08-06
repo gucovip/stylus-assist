@@ -1,6 +1,8 @@
 # stylus-assist
 项目启动时间 2018.2.24
+<!-- Plugin description -->
 帮助vue.js开发者 编辑 stylus 样式， 适用于 vue.js 的单文件组件。
+<!-- Plugin description end -->
 正在筹备开发 VS code 插件，如果有兴趣的可以联系 QQ:11563928
 
 #### 获取Plugin
@@ -14,35 +16,35 @@ windows: `Alt + insert`, Mac: `control + Enter`
 
 #### 最近更新
 * 2020.07.20
-    * 1.4.4 优化代码
+  * 1.4.4 优化代码
 
 #### 功能介绍
 ##### 简体中文
-* GoCss 
-    * 跳转到样式
-        * .vue 文件
-        * .pug 跳转到 .styl 文件
-    * 新增样式
-        * 没有匹配的样式 创建标准格式class名称，例如：$style.aBC => .a-b-c
+* GoCss
+  * 跳转到样式
+    * .vue 文件
+    * .pug 跳转到 .styl 文件
+  * 新增样式
+    * 没有匹配的样式 创建标准格式class名称，例如：$style.aBC => .a-b-c
 * PasteCss 格式化从其他地方复制的样式（不包含class或id等css选择器）
-    * margin:0;  =>  margin 0
+  * margin:0;  =>  margin 0
 * InsertClass 在style标签的最后，插入新的样式class，致力于编写代码时，快速插入以提高编码效率。
-    *   .newClass
-    *     |(光标定位于这里)
-    * <style>
+  *   .newClass
+  *     |(光标定位于这里)
+  * <style>
 ##### English
 * GoCss
-    * Jump to stylus css
-         * .vue file
-         * .pug jump to .styl file
-    * New class mode
-         * If plugin can not find selected class,it will think you want to create a new class,such as：$style.aBC =&gt; .a-b-c
+  * Jump to stylus css
+    * .vue file
+    * .pug jump to .styl file
+  * New class mode
+    * If plugin can not find selected class,it will think you want to create a new class,such as：$style.aBC =&gt; .a-b-c
 * PasteCss format some css(don't contains class or other css selectors) you copy from another place, such as chrome or files
-    * margin:0;  =&gt;  margin 0
+  * margin:0;  =&gt;  margin 0
 * Insert class into zhe last of style-tag
-    *   .newClass
-    *     |
-    * <style>
+  *   .newClass
+  *     |
+  * <style>
 
 #### 获取帮助以及建议
 QQ:11563928
@@ -66,7 +68,8 @@ QQ:11563928
 * 1.4.2 修改开源项目地址。
 * 1.4.3 优化了InsertClass的首次插入操作。
 * 1.4.4 优化代码
+* 2.0.0 
 
 #### 给我买杯咖啡 Buy me a coffee
-![image](https://user-images.githubusercontent.com/13230237/35954042-88d45846-0cc2-11e8-98a3-29adb4f0be9a.png)
+![image](https://user-images.githubusercontent.com/13230237/128452500-292addd6-8bd6-42f1-aa9f-547341b0cb1e.png)
 

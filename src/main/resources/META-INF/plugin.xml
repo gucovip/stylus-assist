@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>vip.guco.stylusassist</id>
-    <name>stylus-assist</name>
-    <version>1.4.3</version>
-    <vendor email="gucovip@gmail.com" url="https://github.com/gucovip/stylus-assist">stylus-assist</vendor>
+    <name>Stylus Assist</name>
+    <version>2.0.0</version>
+    <vendor email="gucovip@gmail.com" url="https://github.com/gucovip/stylus-assist">MaiYa</vendor>
 
     <description><![CDATA[
     <b>Shortcut Key：</b>
@@ -42,32 +42,27 @@
     <change-notes><![CDATA[
     <ul>
         <li>......</li>
-        <li>1.4.0 新增InsertClass功能，该功能处于公共测试阶段，如有问题，欢迎在github上提出。</li>
         <li>1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。</li>
         <li>1.4.2 修改开源项目地址。</li>
         <li>1.4.3 优化了InsertClass的首次插入操作。</li>
-        <li>1.4.4 优化代码</li>
+        <li>2.0.0 对新版本IDE的兼容</li>
     </ul>
     ]]>
     </change-notes>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="162"/>
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products-->
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
 
-
     <actions>
-        <action id="vip.guco.stylusmodulejump" class="JumpAction" text="GoCss"
-                description="vip.guco.stylusmodulejump">
+        <action id="vip.guco.jumpCssCode" class="JumpAction" text="GoCss"
+                description="vip.guco.jumpCssCode">
             <add-to-group group-id="GenerateGroup" anchor="first"/>
         </action>
         <action id="vip.guco.insertCssCode" class="InsertAction" text="PasteCss"
                 description="vip.guco.insertCssCode">
-            <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="vip.guco.stylusmodulejump"/>
+            <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="vip.guco.jumpCssCode"/>
         </action>
         <action id="vip.guco.insertClass" class="InsertClassAction" text="InsertClass"
                 description="vip.guco.insertClass">
