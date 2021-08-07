@@ -41,11 +41,11 @@
 
     <change-notes><![CDATA[
     <ul>
-        <li>......</li>
-        <li>1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。</li>
-        <li>1.4.2 修改开源项目地址。</li>
-        <li>1.4.3 优化了InsertClass的首次插入操作。</li>
         <li>2.0.0 对新版本IDE的兼容</li>
+        <li>1.4.3 优化了InsertClass的首次插入操作。</li>
+        <li>1.4.2 修改开源项目地址。</li>
+        <li>1.4.1 修复没有style标签异常的情况，优化了实现缩小了插件大小。</li>
+        <li>......</li>
     </ul>
     ]]>
     </change-notes>
