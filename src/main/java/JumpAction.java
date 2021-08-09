@@ -163,12 +163,19 @@ public class JumpAction extends AnAction {
     }
 
     private static void JumpToEditorAndSelectIt(List<Integer> x, Editor editor) {
+        // 获取位置对象
         LogicalPosition logicalPosition = editor.offsetToLogicalPosition(x.get(0));
+        // 获取滚动器
         ScrollingModel scrollingModel = editor.getScrollingModel();
+        // 滚动到指定位置
         scrollingModel.scrollTo(logicalPosition, ScrollType.MAKE_VISIBLE);
+        // 获取选择器
         SelectionModel selectionModel = editor.getSelectionModel();
+        // 选择指定内容
         selectionModel.setSelection(x.get(0), x.get(1) - 1);
+        // 获取光标器
         CaretModel caretModel = editor.getCaretModel();
+        // 光标位置移动到
         caretModel.moveToOffset(x.get(1) - 1, true);
     }
 }
