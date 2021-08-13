@@ -61,7 +61,7 @@ public class JumpAction extends AnAction {
             //匹配类型1
             String matchStr = "\\s{1}[\\.#]" + selectedText + "[\\r\\n,]";
             //匹配类型2
-            String matchStr2 = HumpToMiddleline(matchStr);
+            String matchStr2 = Utils.formatClassWithShortLine(matchStr);
             //获取匹配结果
             List<Integer> x = findIndex(matchStr, allContent);
 
@@ -72,7 +72,7 @@ public class JumpAction extends AnAction {
 
             if (x.size() <= 0) {
                 //未匹配到类型2识别为新增样式，生成格式化好的css类名并插入剪切板
-                CopyToClip("." + HumpToMiddleline(selectedText));
+                CopyToClip("." + Utils.formatClassWithShortLine(selectedText));
                 return;
             }
 
@@ -97,7 +97,7 @@ public class JumpAction extends AnAction {
             //匹配类型1
             String matchStr = "\\." + selectedText + "[\\r\\n,]";
             //匹配类型2
-            String matchStr2 = HumpToMiddleline(matchStr);
+            String matchStr2 = Utils.formatClassWithShortLine(matchStr);
             //获取目标匹配文本
             String targetText = PsiDocumentManager.getInstance(anActionEvent.getProject())
                     .getDocument(targetPsiFile).getText();
@@ -106,7 +106,7 @@ public class JumpAction extends AnAction {
             if (x.size() <= 0) x = findIndex(matchStr2, targetText);
 
             if (x.size() <= 0) {
-                CopyToClip("." + HumpToMiddleline(selectedText));
+                CopyToClip("." + Utils.formatClassWithShortLine(selectedText));
                 return;
             }
             //匹配到结果，打开文件并跳转位置
@@ -144,16 +144,6 @@ public class JumpAction extends AnAction {
 
     @Override
     public void update(final AnActionEvent anActionEvent) {
-    }
-
-    public static String HumpToMiddleline(String para) {
-        StringBuilder sb = new StringBuilder(para);
-        for (int i = para.length() - 1; i > 0; i--) {
-            if (Character.isUpperCase(para.charAt(i))) {
-                sb.insert(i, "-");
-            }
-        }
-        return sb.toString().toLowerCase();
     }
 
     public static void CopyToClip(String str) {

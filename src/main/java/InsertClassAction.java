@@ -40,7 +40,7 @@ public class InsertClassAction extends AnAction {
             selectedText = selectionModel.getSelectedText();
         }
 
-        String insertClass = "." + JumpAction.HumpToMiddleline(selectedText);
+        String insertClass = "." + Utils.formatClass(selectedText);
         String preInsertString = "\n  " + insertClass + "\n    \n";
         Document document = editor.getDocument();
         int endTag = allContent.indexOf("</style>");

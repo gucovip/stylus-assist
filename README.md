@@ -51,6 +51,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
 QQ:11563928
 
 #### 更新日志
+* 2.0.1 InsertClass 不再格式化为短横线间隔，而是驼峰式。GoCss 依然支持查找短横线间隔的class。
 * 2.0.0 调整整体代码架构兼容最新版的 IDE
 * 1.4.4 优化代码
 * 1.4.3 优化了InsertClass的首次插入操作。
