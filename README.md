@@ -28,9 +28,12 @@ windows: `Alt + insert`, Mac: `control + Enter`
 * PasteCss 格式化从其他地方复制的样式（不包含class或id等css选择器）
   * margin:0;  =>  margin 0
 * InsertClass 在style标签的最后，插入新的样式class，致力于编写代码时，快速插入以提高编码效率。
-  *   .newClass
+  * .newClass
   *     |(光标定位于这里)
   * <\/style>
+
+##### PS
+关于标准 class 名称是 .a-b-c 还是 .aBC 以往就一直存在争议，现在给出一些拙见：css modules 情况下，$style.xxx 驼峰更加符合编程思想同时也更加简洁；非 css modules 情况下，建议用 .a-b-c，
 
 ##### English
 * GoCss
