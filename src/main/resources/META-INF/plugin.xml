@@ -41,6 +41,7 @@
 
     <change-notes><![CDATA[
     <ul>
+        <li>2.0.2 GoCss 也将生成 驼峰式 的 class。</li>
         <li>2.0.1 InsertClass 不再格式化为短横线间隔，而是驼峰式。GoCss 依然支持查找短横线间隔的class。</li>
         <li>2.0.0 对新版本IDE的兼容</li>
         <li>1.4.3 优化了InsertClass的首次插入操作。</li>
