@@ -61,7 +61,7 @@ public class JumpAction extends AnAction {
             //匹配类型1
             String matchStr = "\\s{1}[\\.#]" + selectedText + "[\\r\\n,]";
             //匹配类型2
-            String matchStr2 = Utils.formatClass(matchStr);
+            String matchStr2 = Utils.formatClassWithShortLine(matchStr);
             //获取匹配结果
             List<Integer> x = findIndex(matchStr, allContent);
 
@@ -97,7 +97,7 @@ public class JumpAction extends AnAction {
             //匹配类型1
             String matchStr = "\\." + selectedText + "[\\r\\n,]";
             //匹配类型2
-            String matchStr2 = Utils.formatClass(matchStr);
+            String matchStr2 = Utils.formatClassWithShortLine(matchStr);
             //获取目标匹配文本
             String targetText = PsiDocumentManager.getInstance(anActionEvent.getProject())
                     .getDocument(targetPsiFile).getText();
