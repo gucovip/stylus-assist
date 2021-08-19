@@ -8,10 +8,12 @@
 直接从idea插件仓库中搜索 Stylus Assist
 
 #### 技术交流
-因为下载量达到10k+，重新组建 Stylus Assist 的交流QQ群：807838852，加群备注 Github 看到。
+因为下载量达到30k+，重新组建 Stylus Assist 的交流QQ群：807838852，加群备注 Github 看到。
 
 #### 快捷键
 windows: `Alt + insert`, Mac: `control + Enter`
+
+注意：可以在 keymap 中配置自己喜欢的快捷键，后续如果可以将默认自动设置好快捷键（InsertClass: command + \; PasteCss: control + option + v）。
 
 #### 最近更新
 * 2021.08.17  2.0.3 GoCss 修复 非驼峰式 无法跳转的 bug。
