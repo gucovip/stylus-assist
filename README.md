@@ -16,6 +16,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
 注意：可以在 keymap 中配置自己喜欢的快捷键，后续如果可以将默认自动设置好快捷键（InsertClass: command + \; PasteCss: control + option + v）。
 
 #### 最近更新
+* 2021.08.23  2.0.4 PasteCss 新增默认快捷键 ctrl(control) + alt(option) + v。
 * 2021.08.17  2.0.3 GoCss 修复 非驼峰式 无法跳转的 bug。
 
 ##### PS
@@ -58,6 +59,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
 QQ:11563928
 
 #### 更新日志
+* 2.0.4 PasteCss 新增默认快捷键 ctrl(control) + alt(option) + v。
 * 2.0.3 GoCss 修复 非驼峰式 无法跳转的 bug。
 * 2.0.2 GoCss 也将生成 驼峰式 的 class
 * 2.0.1 InsertClass 不再格式化为短横线间隔，而是驼峰式。GoCss 依然支持查找短横线间隔的class。

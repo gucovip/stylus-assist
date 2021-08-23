@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>vip.guco.stylusassist</id>
     <name>Stylus Assist</name>
-    <version>2.0.3</version>
+    <version>2.0.4</version>
     <vendor email="gucovip@gmail.com" url="https://github.com/gucovip/stylus-assist">MaiYa</vendor>
 
     <description><![CDATA[
@@ -41,6 +41,7 @@
 
     <change-notes><![CDATA[
     <ul>
+        <li>2.0.4 PasteCss 新增默认快捷键 ctrl(control) + alt(option) + v。</li>
         <li>2.0.3 GoCss 修复 非驼峰式 无法跳转的 bug。</li>
         <li>2.0.2 GoCss 也将生成 驼峰式 的 class。</li>
         <li>2.0.1 InsertClass 不再格式化为短横线间隔，而是驼峰式。GoCss 依然支持查找短横线间隔的class。</li>
@@ -60,15 +61,16 @@
 
     <actions>
         <action id="vip.guco.jumpCssCode" class="JumpAction" text="GoCss"
-                description="vip.guco.jumpCssCode">
+                description="GoCss, jump to css class">
             <add-to-group group-id="GenerateGroup" anchor="first"/>
         </action>
         <action id="vip.guco.insertCssCode" class="InsertAction" text="PasteCss"
-                description="vip.guco.insertCssCode">
+                description="PasteCss, paste class copy from browser or others">
             <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="vip.guco.jumpCssCode"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt v"/>
         </action>
         <action id="vip.guco.insertClass" class="InsertClassAction" text="InsertClass"
-                description="vip.guco.insertClass">
+                description="InsertClass, create class with selection and insert into last of style tag">
             <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="vip.guco.insertCssCode"/>
         </action>
     </actions>
