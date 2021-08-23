@@ -1,4 +1,7 @@
 # stylus-assist
+[![Build](https://github.com/gucovip/stylus-assist/workflows/Build/badge.svg)](https://github.com/gucovip/stylus-assist/actions/workflows/build.yaml)
+
+
 项目启动时间 2018.2.24
 <!-- Plugin description -->
 帮助vue.js开发者 编辑 stylus 样式， 适用于 vue.js 的单文件组件。
