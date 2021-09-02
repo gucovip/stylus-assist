@@ -1,0 +1,24 @@
+{
+  "name": "stylus-assist",
+  "version": "1.0.0",
+  "description": "[![Build](https://github.com/gucovip/stylus-assist/workflows/Build/badge.svg)](https://github.com/gucovip/stylus-assist/actions/workflows/build.yaml)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gucovip/stylus-assist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gucovip/stylus-assist/issues"
+  },
+  "homepage": "https://github.com/gucovip/stylus-assist#readme",
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0"
+  }
+}
