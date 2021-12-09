@@ -62,6 +62,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
 QQ:11563928
 
 #### 更新日志
+* 2.0.5 修复新版本 213 不可见的问题。
 * 2.0.4 PasteCss 新增默认快捷键 ctrl(control) + alt(option) + v。
 * 2.0.3 GoCss 修复 非驼峰式 无法跳转的 bug。
 * 2.0.2 GoCss 也将生成 驼峰式 的 class
