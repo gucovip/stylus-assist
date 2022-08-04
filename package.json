@@ -18,7 +18,5 @@
   },
   "homepage": "https://github.com/gucovip/stylus-assist#readme",
   "devDependencies": {
-    "conventional-changelog-cli": "^2.1.1",
-    "cz-conventional-changelog": "^3.3.0"
   }
 }
