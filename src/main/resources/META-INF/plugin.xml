@@ -41,6 +41,7 @@
 
     <change-notes><![CDATA[
     <ul>
+        <li>2.0.7 兼容到 223 版本</li>
         <li>2.0.6 兼容到 221 版本</li>
         <li>2.0.5 修复新版本 213 不可见的问题</li>
         <li>2.0.4 PasteCss 新增默认快捷键 ctrl(control) + alt(option) + v。</li>
