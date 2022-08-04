@@ -19,6 +19,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
 注意：可以在 keymap 中配置自己喜欢的快捷键，后续如果可以将默认自动设置好快捷键（InsertClass: command + \; PasteCss: control + option + v）。
 
 #### 最近更新
+* 2022.08.4  2.0.7 兼容到 223 版本
 * 2022.04.13  2.0.6 兼容到 221 版本
 * 2021.12.09  2.0.5 修复新版本 213 不可见的问题。
 * 2021.08.23  2.0.4 PasteCss 新增默认快捷键 ctrl(control) + alt(option) + v。
@@ -64,6 +65,7 @@ windows: `Alt + insert`, Mac: `control + Enter`
 QQ:11563928
 
 #### 更新日志
+* 2.0.7 兼容到 223 版本
 * 2.0.6 兼容到 221 版本
 * 2.0.5 修复新版本 213 不可见的问题。
 * 2.0.4 PasteCss 新增默认快捷键 ctrl(control) + alt(option) + v。
