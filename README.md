@@ -8,7 +8,7 @@
 <!-- Plugin description end -->
 
 #### 获取Plugin
-直接从idea插件仓库中搜索 Stylus Assist
+直接从 idea 插件仓库中搜索 Stylus Assist
 
 #### 技术交流
 因为下载量达到30k+，重新组建 Stylus Assist 的交流QQ群：807838852，加群备注 Github 看到。
