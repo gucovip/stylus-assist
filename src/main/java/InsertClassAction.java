@@ -41,7 +41,7 @@ public class InsertClassAction extends AnAction {
         }
 
         String insertClass = "." + Utils.formatClass(selectedText);
-        String preInsertString = "\n  " + insertClass + "\n    \n";
+        String preInsertString = "\n" + insertClass + "\n  \n";
         Document document = editor.getDocument();
         int endTag = allContent.indexOf("</style>");
         if (endTag == -1) {
