@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>vip.guco.stylusassist</id>
     <name>Stylus Assist</name>
-    <version>2.0.6</version>
+    <version>2.1.0</version>
     <vendor email="gucovip@gmail.com" url="https://github.com/gucovip/stylus-assist">MaiYa</vendor>
 
     <description><![CDATA[
@@ -41,6 +41,7 @@
 
     <change-notes><![CDATA[
     <ul>
+        <li>2.1.0 InsertClass 插入 class 时不再添加缩进。</li>
         <li>2.0.7 兼容到 223 版本</li>
         <li>2.0.6 兼容到 221 版本</li>
         <li>2.0.5 修复新版本 213 不可见的问题</li>
