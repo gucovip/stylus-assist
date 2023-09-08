@@ -3,9 +3,9 @@
 
 新仓库：
 
-[jetbrains](https://github.com/happy-share-forever/stylus-assist-intellij)
+[stylus-assist-jetbrains](https://github.com/happy-share-forever/stylus-assist-intellij)
 
-[vscode](https://github.com/happy-share-forever/stylus-assist-vscode)
+[stylus-assist-vscode](https://github.com/happy-share-forever/stylus-assist-vscode)
 
 项目启动时间 2018.2.24
 <!-- Plugin description -->
