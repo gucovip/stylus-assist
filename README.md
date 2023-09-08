@@ -3,7 +3,7 @@
 
 新仓库：
 
-[stylus-assist-jetbrains](https://github.com/happy-share-forever/stylus-assist-intellij)
+[stylus-assist-intellij](https://github.com/happy-share-forever/stylus-assist-intellij)
 
 [stylus-assist-vscode](https://github.com/happy-share-forever/stylus-assist-vscode)
 
