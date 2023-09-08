@@ -1,6 +1,11 @@
 # stylus-assist
 [![Build](https://github.com/gucovip/stylus-assist/workflows/Build/badge.svg)](https://github.com/gucovip/stylus-assist/actions/workflows/build.yaml)
 
+新仓库：
+
+[jetbrains](https://github.com/happy-share-forever/stylus-assist-intellij)
+
+[vscode](https://github.com/happy-share-forever/stylus-assist-vscode)
 
 项目启动时间 2018.2.24
 <!-- Plugin description -->
